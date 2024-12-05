@@ -30,16 +30,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     try {
         // Nastavení serveru
         $mail->isSMTP();
-        $mail->Host = 'smtp-mail.outlook.com'; // SMTP server pro Outlook
+        $mail->Host = 'XXXXXX'; // SMTP server pro Outlook
         $mail->SMTPAuth = true; // Povolit SMTP autentizaci
         $mail->SMTPDebug = 2; // Ladění: výstup všech detailů připojení
-        $mail->Username = 'Odadoz@outlook.cz'; // e-mail
-        $mail->Password = 'Lolipop123'; // heslo
+        $mail->Username = 'chleba@hul.cz'; // e-mail
+        $mail->Password = 'XXXXXXXXXX'; // heslo
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Typ šifrování
         $mail->Port = 587; // Port pro šifrované připojení
 
         // Nastavení odesílatele
-        $mail->setFrom('Odadoz@outlook.cz', 'Odadoz');
+        $mail->setFrom('chleba@hul.cz', 'Odadoz');
 
         while ($recipient = $recipients->fetch_assoc()) {
             $to = $recipient['email'];
